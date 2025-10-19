@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gala Wellness | Concierge Mobile Wellness</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon.png"
+    />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .font-playfair {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-b from-white to-teal-50 text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white z-50 shadow-md">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-cyan-300 flex items-center justify-center shadow-md text-white font-playfair text-xl"
+          >
+            G
+          </div>
+          <div>
+            <h1 class="text-lg font-semibold leading-none">
+              Gala <span class="text-teal-600">Wellness</span>
+            </h1>
+            <p class="text-xs text-gray-500">Concierge Mobile Wellness</p>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#home" class="text-teal-600 border-b-2 border-teal-600 pb-1"
+            >Home</a
+          >
+          <a href="services.html" class="text-gray-600 hover:text-teal-600 pb-1"
+            >Services</a
+          >
+          <a href="about.html" class="text-gray-600 hover:text-teal-600 pb-1"
+            >About</a
+          >
+          <a href="contact.html" class="text-gray-600 hover:text-teal-600 pb-1"
+            >Contact</a
+          >
+          <a
+            href="https://calendly.com/your-calendar"
+            target="_blank"
+            class="ml-4 px-4 py-2 rounded-full bg-teal-600 text-white shadow-md hover:opacity-90"
+            >Book Now</a
+          >
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+        <a
+          href="#home"
+          class="block px-6 py-3 border-b text-teal-600 font-medium"
+          >Home</a
+        >
+        <a
+          href="services.html"
+          class="block px-6 py-3 border-b text-gray-700 hover:text-teal-600"
+          >Services</a
+        >
+        <a
+          href="about.html"
+          class="block px-6 py-3 border-b text-gray-700 hover:text-teal-600"
+          >About</a
+        >
+        <a
+          href="contact.html"
+          class="block px-6 py-3 border-b text-gray-700 hover:text-teal-600"
+          >Contact</a
+        >
+        <a
+          href="https://calendly.com/your-calendar"
+          target="_blank"
+          class="block mx-6 my-2 px-4 py-3 rounded-full bg-teal-600 text-white text-center font-medium shadow hover:opacity-90"
+          >Book Now</a
+        >
+      </div>
+
+      <script>
+        // Toggle mobile menu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative w-full bg-teal-50">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="https://cdn.pixabay.com/photo/2025/05/29/08/25/doctor-9628974_1280.jpg"
+          alt="Wellness background"
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex flex-col justify-center items-center text-center py-32 px-6 sm:py-40"
+      >
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-playfair font-extrabold text-gray-900"
+        >
+          Welcome to the <span class="text-teal-600">Gala</span>
+        </h1>
+        <p class="mt-4 max-w-2xl text-gray-700 text-sm sm:text-base md:text-lg">
+          At Gala Wellness, we believe wellness should be celebrated—not rushed.
+          We bring modern medicine, restorative therapies, and personalized care
+          directly to you.
+        </p>
+        <div
+          class="mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center"
+        >
+          <a
+            href="https://calendly.com/your-calendar"
+            target="_blank"
+            class="px-6 py-3 rounded-full bg-teal-600 text-white font-medium shadow-lg hover:opacity-90 w-full sm:w-auto text-center"
+          >
+            Book Now
+          </a>
+          <a
+            href="services.html"
+            class="px-6 py-3 rounded-full border border-teal-600 text-teal-600 bg-white font-medium hover:bg-teal-50 w-full sm:w-auto text-center"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section
+      id="about"
+      class="py-16 px-6 bg-gradient-to-b from-teal-50 to-white"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-playfair font-semibold mb-4">
+          🌿 Our Mission
+        </h2>
+        <p class="text-gray-700">
+          To redefine healthcare by making it accessible, elegant, and
+          effective—where every patient receives high-quality, holistic care in
+          a comfortable, private setting.
+        </p>
+        <p class="mt-4 font-medium text-teal-700">
+          Step into the Gala—where your wellness takes center stage. 💫
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-playfair font-semibold text-center mb-12">
+          Our Services
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Concierge Mobile Wellness -->
+          <div
+            class="p-6 bg-teal-50 rounded-2xl shadow-md border border-transparent transition duration-500 hover:border-teal-300 hover:shadow-lg hover:bg-teal-100"
+            data-aos="fade-up"
+          >
+            <h3
+              class="text-teal-600 font-semibold text-lg mb-2 flex items-center gap-2 hover:text-teal-700 transition duration-300"
+            >
+              ✨ Concierge Mobile Wellness
+            </h3>
+            <p class="text-gray-700">
+              Premium in-home care — clinical expertise delivered with comfort
+              and discretion.
+            </p>
+          </div>
+
+          <!-- IV Therapy -->
+          <div
+            class="p-6 bg-teal-50 rounded-2xl shadow-md border border-transparent transition duration-500 hover:border-teal-300 hover:shadow-lg hover:bg-teal-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3
+              class="text-teal-600 font-semibold text-lg mb-2 flex items-center gap-2 hover:text-teal-700 transition duration-300"
+            >
+              💧 IV Therapy
+            </h3>
+            <p class="text-gray-700">
+              Custom IV infusions to boost energy, immunity, and total-body
+              wellness.
+            </p>
+          </div>
+
+          <!-- Urgent & Primary Care -->
+          <div
+            class="p-6 bg-teal-50 rounded-2xl shadow-md border border-transparent transition duration-500 hover:border-teal-300 hover:shadow-lg hover:bg-teal-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h3
+              class="text-teal-600 font-semibold text-lg mb-2 flex items-center gap-2 hover:text-teal-700 transition duration-300"
+            >
+              ⚕️ Urgent & Primary Care
+            </h3>
+            <p class="text-gray-700">
+              Prompt, compassionate medical attention at your location — skip
+              the waiting room.
+            </p>
+          </div>
+
+          <!-- Weight Management -->
+          <div
+            class="p-6 bg-teal-50 rounded-2xl shadow-md border border-transparent transition duration-500 hover:border-teal-300 hover:shadow-lg hover:bg-teal-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h3
+              class="text-teal-600 font-semibold text-lg mb-2 flex items-center gap-2 hover:text-teal-700 transition duration-300"
+            >
+              ⚖️ Weight Management
+            </h3>
+            <p class="text-gray-700">
+              Medically guided weight loss programs tailored to your lifestyle
+              and goals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Include AOS Animation Library -->
+      <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 800,
+          once: true,
+        });
+      </script>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-playfair font-semibold mb-6">
+          Contact & Bookings
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Prefer a direct booking? Use the button below or send us a message.
+        </p>
+
+        <form onsubmit="handleSubmit(event)" class="space-y-4 text-left">
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+            class="w-full px-4 py-3 border rounded-md"
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+            class="w-full px-4 py-3 border rounded-md"
+          />
+          <textarea
+            id="message"
+            placeholder="Message / Preferred time / Location"
+            required
+            class="w-full px-4 py-3 border rounded-md min-h-[120px]"
+          ></textarea>
+          <div class="flex items-center gap-4">
+            <button
+              type="submit"
+              class="px-6 py-3 bg-teal-600 text-white rounded-full font-medium shadow hover:opacity-90"
+            >
+              Send Message
+            </button>
+            <a
+              href="https://calendly.com/your-calendar"
+              target="_blank"
+              class="px-6 py-3 border border-teal-600 rounded-full text-teal-600 font-medium hover:bg-teal-50"
+              >Book Now</a
+            >
+          </div>
+        </form>
+        <p id="status" class="mt-4 text-teal-700 hidden">
+          Your email client should open — if not, please email us directly at
+          <span class="font-medium">gala@yourdomain.com</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t text-center text-sm text-gray-600">
+      © <span id="year"></span> Gala Wellness — All rights reserved.
+    </footer>
+
+    <script>
+      // Contact form mailto
+      function handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+        const subject = encodeURIComponent(
+          "Gala Wellness Inquiry from " + name
+        );
+        const body = encodeURIComponent(
+          message + "\\n\\nContact email: " + email
+        );
+        window.location.href = `mailto:gala@yourdomain.com?subject=${subject}&body=${body}`;
+        document.getElementById("status").classList.remove("hidden");
+      }
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
