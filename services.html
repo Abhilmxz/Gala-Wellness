@@ -140,21 +140,39 @@
     </script>
 
     <!-- Hero Section -->
-    <section class="text-center py-16 px-6">
-      <h2 class="text-4xl md:text-5xl font-playfair font-extrabold">
-        Our Services
-      </h2>
-      <p class="mt-4 max-w-2xl mx-auto text-gray-600">
-        Explore our full range of wellness offerings — personalized,
-        professional, and delivered to your location.
-      </p>
-      <div class="mt-8">
-        <a
-          href="https://calendly.com/your-calendar"
-          target="_blank"
-          class="px-6 py-3 rounded-full bg-teal-600 text-white font-medium shadow-lg hover:opacity-90"
-          >Book Now</a
-        >
+    <section class="relative text-center py-16 px-6 overflow-hidden">
+      <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://cdn.pixabay.com/video/2019/09/19/27019-361107952_large.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-white">
+        <h2 class="text-4xl md:text-5xl font-playfair font-extrabold">
+          Our Services
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-200">
+          Explore our full range of wellness offerings — personalized,
+          professional, and delivered to your location.
+        </p>
+        <div class="mt-8">
+          <a
+            href="https://calendly.com/your-calendar"
+            target="_blank"
+            class="px-6 py-3 rounded-full bg-teal-600 text-white font-medium shadow-lg hover:opacity-90"
+          >
+            Book Now
+          </a>
+        </div>
       </div>
     </section>
 
@@ -162,11 +180,9 @@
     <section class="py-16 px-6 bg-white">
       <div class="max-w-5xl mx-auto">
         <div class="grid md:grid-cols-2 gap-8">
-
-
           <!-- Concierge -->
           <div class="p-6 bg-teal-50 rounded-2xl shadow-sm">
-              <img
+            <img
               src="./assets/images/m.jpg"
               alt="Concierge Mobile Wellness"
               class="mb-4 rounded-lg"
@@ -204,7 +220,7 @@
 
           <!-- Urgent & Primary Care -->
           <div class="p-6 bg-teal-50 rounded-2xl shadow-sm">
-              <img
+            <img
               src="./assets/images/u.jpg"
               alt="Urgent Primary Care"
               class="mb-4 rounded-lg"
