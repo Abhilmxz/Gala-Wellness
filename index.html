@@ -134,15 +134,21 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative w-full bg-teal-50">
+    <section id="home" class="relative text-center py-40 px-6 overflow-hidden">
       <!-- Background Image -->
-      <div class="absolute inset-0">
-        <img
-          src="https://cdn.pixabay.com/photo/2025/05/29/08/25/doctor-9628974_1280.jpg"
-          alt="Wellness background"
-          class="w-full h-full object-cover opacity-50"
-        />
-      </div>
+        <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://www.pexels.com/download/video/5406105/" type="video/mp4" />
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-10"></div>
 
       <!-- Content -->
       <div
@@ -153,7 +159,7 @@
         >
           Welcome to the <span class="text-teal-600">Gala</span>
         </h1>
-        <p class="mt-4 max-w-2xl text-gray-700 text-sm sm:text-base md:text-lg">
+        <p class="mt-4 max-w-2xl text-white text-sm sm:text-base md:text-lg">
           At Gala Wellness, we believe wellness should be celebrated—not rushed. 
           Our mission is to help you look, feel, and live your best 
           through a balanced blend of modern medicine, restorative therapies, and personalized care.
